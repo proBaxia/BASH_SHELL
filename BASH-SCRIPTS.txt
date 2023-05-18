@@ -1,6 +1,3 @@
-https://www.youtube.com/watch?v=lgUwYwBozow
-https://www.youtube.com/watch?v=pGuHugHn35Y
-
 Live AWS Project using SHELL SCRIPTING for DevOps
 
 ssh to your linux OS 
@@ -50,5 +47,4 @@ press esc button with !wq to close and save the vim aws_resource_tracker.sh
 "chmod 777 aws_resource_tracker.sh" >>will give read, write, and execute permissions for everyone.
 "./aws_resource_tracker.sh | more" >>to execute your bash file 
 
-
-
+------------------------------------------------------------------
