@@ -1,0 +1,54 @@
+https://www.youtube.com/watch?v=lgUwYwBozow
+https://www.youtube.com/watch?v=pGuHugHn35Y
+
+Live AWS Project using SHELL SCRIPTING for DevOps
+
+ssh to your linux OS 
+check if you have install AWS CLI on your linux-OS type "aws" if not follow link Document  
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+after installing aws cli check if you have configure it to type "aws configure" if not provide the Access key ID and
+AWS secretAaccess Key, Default region name and  Default output format or follow link Document
+https://docs.aws.amazon.com/cli/latest/reference/configure/index.html
+
+create a file "vim aws_resource_tracker.sh" copy and past 
+---------------------------------------------------------
+#!/bin/bash 
+
+##################
+#Authour: Gabriel
+#Date: 5/18/2023
+#Version: v1 
+#This scrips will report the AWS resource usage 
+###############################################
+set -x
+
+# AWS S3
+# AWS EC2
+# AWS Lambda
+# AWS IAM Users
+
+# List s3 buckets 
+echo "Print list of s3 buckets"
+aws s3 ls
+
+# List EC2 instances
+echo "Print list of ec2"
+aws ec2 describe-instances | jq '.Reservations[].Instances[].Instancesid'
+
+# List lambda 
+echo "Print list of ec2 of s3 buckets"
+
+aws lambda list-fuctions
+echo "Print list of  lambda fuctions "
+
+# List IAM user
+echo "Print list of IAM Users"
+aws iam list-users
+--------------------------------------
+press esc button with !wq to close and save the vim aws_resource_tracker.sh
+
+"chmod 777 aws_resource_tracker.sh" >>will give read, write, and execute permissions for everyone.
+"./aws_resource_tracker.sh | more" >>to execute your bash file 
+
+
+
